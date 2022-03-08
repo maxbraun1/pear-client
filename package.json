@@ -1,6 +1,6 @@
 {
   "name": "client",
-  "homepage": "http://maxbraun1.github.io/pear-client",
+  "homepage": "http://maxbraun1.github.io/pear-client/index.html",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -1,6 +1,4 @@
 {
-  "name": "pear-client",
-  "homepage": "http://maxbraun1.github.io/pear-client",
   "version": "0.1.0",
   "private": false,
   "dependencies": {
@@ -20,8 +18,6 @@
     "web-vitals": "^2.1.2"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -44,8 +40,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "gh-pages": "^3.2.3"
   }
 }

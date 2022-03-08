@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/pear-client/static/css/main.03e2cff8.css",
-    "main.js": "/pear-client/static/js/main.a32ed4c5.js",
+    "main.js": "/pear-client/static/js/main.fc28bf49.js",
     "static/media/defaultCover.png": "/pear-client/static/media/defaultCover.845d8790885df3dc816a.png",
     "static/media/me.jpg": "/pear-client/static/media/me.cd26e62726d198a2c1bc.jpg",
     "static/media/google-icon.png": "/pear-client/static/media/google-icon.4ff9a5f6e189dba3d48e.png",
@@ -26,10 +26,10 @@
     "static/media/plusIcon.svg": "/pear-client/static/media/plusIcon.bc4ca35e0d7aabcbb3a16753ba2cf488.svg",
     "static/media/three-dots.svg": "/pear-client/static/media/three-dots.c67cff182f5e8d09d48c51d7f7fddb94.svg",
     "main.03e2cff8.css.map": "/pear-client/static/css/main.03e2cff8.css.map",
-    "main.a32ed4c5.js.map": "/pear-client/static/js/main.a32ed4c5.js.map"
+    "main.fc28bf49.js.map": "/pear-client/static/js/main.fc28bf49.js.map"
   },
   "entrypoints": [
     "static/css/main.03e2cff8.css",
-    "static/js/main.a32ed4c5.js"
+    "static/js/main.fc28bf49.js"
   ]
 }

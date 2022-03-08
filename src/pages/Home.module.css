@@ -1,0 +1,101 @@
+.header{
+    width:100%;
+    height:calc(100vh - var(--NavbarHeight));
+    display:flex;
+    background-color:var(--accent-1);
+    background-size: 100px;
+}
+.headerLeft{
+    color:white;
+    padding:0 50px;
+    box-sizing: border-box;
+    flex-basis:50%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.headerLeftContainer{
+    max-width: 600px;
+}
+.headTitle{
+    font-family: 'Rubik';
+    font-size: 100px;
+    padding:0;
+    margin:0;
+}
+.headDesc{
+    font-family: 'Rubik';
+    font-size: 22px;
+    line-height: 1.5;
+    font-weight: 100;
+}
+.headButton{
+    font-family: 'Rubik';
+    font-size: 20px;
+    background-color: white;
+    color:black;
+    padding:20px 35px;
+}
+.headButton:hover{
+    background-color: gainsboro;
+}
+
+/* -- header right -- */
+.headerRight{
+    flex-basis:50%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.feature{
+    background-color: white;
+    width:100%;
+    box-sizing: border-box;
+    display:flex;
+    padding:20px;
+    border-radius: 10px;
+    margin-bottom:20px;
+    transition: transform .2s ease-in-out;
+    cursor:default;
+}
+.feature:hover{
+    transform: scale(1.1);
+}
+.featureIcon{
+    width:40px;
+    height:40px;
+    padding:5px;
+    margin-right:20px;
+}
+.featureTitle{
+    padding:0;
+    margin:0;
+}
+.featureDesc{
+    padding:0;
+    margin:0;
+}
+
+/* -- About -- */
+.about{
+    padding:100px 0;
+    display:flex;
+    justify-content:space-evenly;
+    flex-direction: row-reverse;
+    background: linear-gradient(90deg, gainsboro 0%, white 100%);
+}
+.aboutDescTitle{
+    text-indent:0;
+}
+.aboutDesc{
+    font-family: 'Rubik';
+    font-weight: 100;
+    font-size:18px;
+    max-width: 600px;
+    text-align: left;
+    text-indent: 50px;
+    line-height: 2;
+}
+
+

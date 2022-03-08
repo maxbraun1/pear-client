@@ -1,0 +1,81 @@
+.navBarUserWrapper{
+    height: var(--NavbarHeight);
+    width: fit-content;
+    display:flex;
+    padding:0 30px;
+    box-sizing: border-box;
+    align-items: center;
+    cursor:pointer;
+    transition: all .2s ease-in-out;
+    border-right:1px solid gainsboro;
+    border-left: 1px solid gainsboro;
+}
+.navBarUserWrapper:hover{
+    background-color: gainsboro;
+}
+.PFP{
+    width:40px;
+    height: 40px;
+    background-color: var(--accent-1);
+    border-radius: 100%;
+    position: relative;
+    overflow:hidden;
+}
+.profileChar{
+    color:white;
+    line-height: 40px;
+    text-align: center;
+    padding:0;
+    margin:0;
+    font-weight: bolder;
+}
+.PFP img{
+    position:absolute;
+    vertical-align: middle;
+    top:0;
+    left:0;
+    width:40px;
+    height:40px;
+}
+.displayName{
+    line-height: 50px;
+    padding:0;
+    padding-left:10px;
+    margin:0;
+    display:inline;
+    vertical-align: bottom;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* -- Dropdown -- */
+.dropdown{
+    position:fixed;
+    top: calc( var(--NavbarHeight));
+    right:20px;
+    background-color: white;
+    width:200px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    overflow:hidden;
+}
+.dropdown a{
+    padding-left:20px;
+    box-sizing: border-box;
+    border-bottom: 1px solid gainsboro;
+    width:100%;
+    display: block;
+    line-height: 40px;
+    font-weight: normal;
+}
+.dropdown a:hover{
+    color:white;
+    background-color: var(--accent-1);
+}
+.dropdown a:last-child{
+    border-bottom: none;
+}

@@ -1,0 +1,27 @@
+.nav{
+    width:100%;
+    height: var(--NavbarHeight);
+    position: sticky;
+    top:0;
+    background-color:white;
+    color:black;
+    border-bottom:1px solid gainsboro;
+    display:flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    z-index: 1000;
+}
+.navLeft{
+    display:flex;
+}
+.link{
+    text-decoration: none;
+    color:#404040;
+    padding:0 10px;
+    line-height: 60px;
+}
+.logo{
+    height:46px;
+    padding:7px;
+    margin-right:10px;
+}

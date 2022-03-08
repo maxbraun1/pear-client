@@ -1,0 +1,65 @@
+/* -- Contact -- */
+.contactInfo{
+    color:white;
+    background-color: #4f7c7c;
+    display:flex;
+    justify-content: space-evenly;
+    padding:50px 0;
+}
+.contactForm{
+    flex-basis: 40%;
+    background-color: white;
+    padding:30px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+.contactFormHeader{
+    color:black;
+    font-size: 32px;
+    padding:0;
+    padding-bottom:15px;
+    margin:0;
+}
+.infoLinks{
+    flex-basis: 20%;
+    background-color: #4b7272;
+    padding:40px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+.infoLinksHeader{
+    padding:0;
+    margin:0;
+    font-size: 22px;
+    padding-bottom:10px;
+    margin-bottom: 10px;
+    font-weight: normal;
+    border-bottom:1px solid white;
+}
+.infoLinks a{
+    width:100%;
+    display: block;
+    color:white;
+    padding:5px 0;
+}
+
+.messageSent{
+    background-color:rgb(64, 119, 64);
+    color:white;
+    text-align: center;
+    margin:20px;
+    box-sizing: border-box;
+    padding:50px;
+    border-radius: 10px;
+}
+
+
+/* -- Footer -- */
+.footer{
+    color:white;
+    background-color: #101010;
+    font-size: 12px;
+    padding:15px;
+    box-sizing: border-box;
+}

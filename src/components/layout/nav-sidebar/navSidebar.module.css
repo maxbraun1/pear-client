@@ -1,0 +1,12 @@
+.navSidebar{
+    height:calc(100vh - var(--NavbarHeight));
+    border-right:1px solid gainsboro;
+    background-color:white;
+    flex-basis: 350px;
+    position:relative;
+    overflow-x:hidden;
+    overflow-y:scroll;
+}
+.navSidebar::-webkit-scrollbar{
+  display:none;
+}

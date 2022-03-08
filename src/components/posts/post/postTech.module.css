@@ -1,0 +1,24 @@
+.postTech{
+    display:flex;
+    padding: 0 20px;
+}
+.techBubble{
+    font-size:14px;
+    background-color: gainsboro;
+    border-radius: 30px;
+    margin:5px;
+    transition: all .2s linear;
+}
+.techBubble:hover{
+    background-color: rgb(179, 179, 179);
+}
+.techBubble a{
+    line-height: 25px;
+    padding:0 15px;
+    color:black;
+    display:block;
+    font-weight: normal;
+}
+.techBubble a:hover{
+    color:black;
+}

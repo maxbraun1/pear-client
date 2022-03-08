@@ -1,0 +1,70 @@
+.request{
+    background-color: white;
+    overflow:hidden;
+    border-radius: 15px;
+    margin-bottom:15px;
+    max-width: 1000px;
+    width:100%;
+}
+.request:last-child{
+    margin-bottom:0;
+}
+.requestHeader{
+    display:flex;
+    align-items: center;
+    padding:10px;
+    box-sizing: border-box;
+}
+.requestTitle{
+    font-size: 18px;
+    font-weight: normal;
+    margin:0;
+    padding:0;
+}
+.requestTitle a{
+    color: var(--accent-1);
+}
+.requestDate{
+    font-size: 11px;
+    color:grey;
+    margin:0;
+    padding:0;
+}
+.requestMessage{
+    margin:10px;
+    background-color: gainsboro;
+    border-radius: 15px;
+    padding:15px;
+}
+.requestInteractions{
+    display:flex;
+    justify-content: space-evenly;
+    border-top:1px solid gainsboro;
+    padding:10px;
+}
+.requestAcceptBtn{
+    text-align: center;
+    flex-basis: 45%;
+    color:white;
+    padding:10px 0;
+    border-radius: 15px;
+    cursor:pointer;
+    transition:all .2s ease-in-out;
+    background-color: #499e44;
+}
+.requestAcceptBtn:hover{
+    background-color: #3a7737;
+}
+.requestDeclineBtn{
+    text-align: center;
+    flex-basis: 45%;
+    color:white;
+    padding:10px 0;
+    border-radius: 15px;
+    cursor:pointer;
+    transition:all .2s ease-in-out;
+    background-color: #b03a3a;
+}
+.requestDeclineBtn:hover{
+    background-color: #852c2c;
+}

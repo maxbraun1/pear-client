@@ -1,0 +1,26 @@
+.mainContent{
+    height:calc(100vh - var(--NavbarHeight));
+    overflow-y: scroll;
+    overflow-x: hidden;
+    flex-basis: 100%;
+    width:100%;
+    background-color:rgba(102, 153, 153, 0.2);
+    padding:20px;
+    box-sizing: border-box;
+}
+
+.mainContent::-webkit-scrollbar-track{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+
+.mainContent::-webkit-scrollbar{
+  width: 10px;
+  background-color: #F5F5F5;
+}
+
+.mainContent::-webkit-scrollbar-thumb{
+  border-radius: 10px;
+  background-color: rgb(185, 185, 185);
+}

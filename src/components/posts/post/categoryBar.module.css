@@ -1,0 +1,14 @@
+.categoryBar{
+    width:100%;
+    height:20px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.categoryName{
+    color:white;
+    line-height: 20px;
+    font-size: 13px;
+    padding:0 10px;
+    background-color: rgba(0,0,0,0.15);
+}

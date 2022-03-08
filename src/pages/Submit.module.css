@@ -1,0 +1,100 @@
+.formContainer{
+    flex-basis:50%;
+    height: calc(100vh - var(--NavbarHeight));
+    overflow-y:scroll;
+    overflow-x:hidden;
+}
+
+.formContainer::-webkit-scrollbar-track{
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+.formContainer::-webkit-scrollbar{
+  width: 8px;
+}
+.formContainer::-webkit-scrollbar-thumb{
+  border-radius: 10px;
+  background-color: rgb(185, 185, 185);
+}
+
+.formWrapper{
+    max-width:500px;
+    margin:0 auto;
+}
+.postForm label{
+    padding:10px 0;
+    display:block;
+}
+.descTextArea{
+    height:200px;
+}
+.categoryTechnologyContainer{
+    display:flex;
+    margin:20px 0;
+}
+.categorySelect{
+    
+}
+.categoryArea{
+    flex-basis: 50%;
+    padding:0 20px;
+    box-sizing: border-box;
+    border-right: 1px solid gainsboro;
+}
+.addedTechnologies{
+    background-color:gainsboro;
+    font-size: 12px;
+    color: #404040;
+    border-radius: 5px;
+    padding:10px;
+    box-sizing: border-box;
+    display:flex;
+    flex-wrap: wrap;
+    min-height:100px;
+    align-items: flex-start;
+}
+.technologyForm{
+    display:flex;
+    align-items:center;
+}
+.technology{
+    background-color:white;
+    line-height: 25px;
+    border-radius: 5px;
+    font-size: 12px;
+    padding: 0 10px;
+    margin:5px;
+}
+.technologyEnterBox{
+    margin-right:10px;
+}
+.technologiesArea{
+    flex-basis: 50%;
+    padding:0 20px;
+    box-sizing: border-box;
+}
+.technologiesArea button{
+    padding:10px;
+    display:block;
+    margin:0 auto;
+}
+.imageUpload{
+    border-top:1px solid gainsboro;
+    padding:20px;
+    box-sizing: border-box;
+}
+.publishArea{
+    padding:20px;
+    box-sizing: border-box;
+    margin:20px 0;
+    border-top: 1px solid gainsboro;
+    width:100%;
+    display:flex;
+}
+
+/* -- Right Side -- */
+.formInfo{
+    flex-basis: 50%;
+    height: calc(100vh - var(--NavbarHeight));
+    background-color: var(--accent-1);
+}

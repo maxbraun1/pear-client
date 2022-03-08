@@ -1,8 +1,8 @@
 {
-  "name": "client",
-  "homepage": "http://maxbraun1.github.io/pear-client/index.html",
+  "name": "pear-client",
+  "homepage": "http://maxbraun1.github.io/pear-client",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@cloudinary/react": "^1.1.0",
     "@cloudinary/url-gen": "^1.6.0",

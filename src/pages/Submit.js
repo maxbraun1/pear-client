@@ -18,7 +18,7 @@ function Register() {
     const [postImage,setPostImage] = useState(null);
 
     useEffect(() => {
-        axios.get('http://localhost:3001/categories/').then(function (response) {
+        axios.get(process.env.REACT_APP_API + '/categories/').then(function (response) {
             setCategoriesList(response.data);
             setCategory(response.data[0]._id);
         })
@@ -45,7 +45,7 @@ function Register() {
         );
         formData.append("postID",newPostID);
 
-        axios.post('http://localhost:3001/posts/addImage', formData ,{withCredentials: true}).then(function (response) {
+        axios.post(process.env.REACT_APP_API + '/posts/addImage', formData ,{withCredentials: true}).then(function (response) {
             if(response.data.error === false){
                 navigate("/feed");
             }else{
@@ -67,7 +67,7 @@ function Register() {
           technologies: technologies
         };
     
-        axios.post('http://localhost:3001/posts/', post ,{withCredentials: true}).then(function (response) {
+        axios.post(process.env.REACT_APP_API + '/posts/', post ,{withCredentials: true}).then(function (response) {
             if(response.data.error === false){
                 if(postImage){
                     addPostImage(response.data.newPostID);

@@ -11,7 +11,7 @@ function Logout() {
 
     useEffect(() => {
 
-        axios.get('http://localhost:3001/auth/logout',{withCredentials: true})
+        axios.get(process.env.REACT_APP_API + '/auth/logout',{withCredentials: true})
         .then(function (response) {
             if(response.data === true){
                 checkLoggedStatus();

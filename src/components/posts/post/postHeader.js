@@ -19,7 +19,7 @@ function PostHeader(props) {
     const navigate = useNavigate()
 
     useEffect(() => {
-        axios.post("http://localhost:3001/users/user", { userID: props.userID }).then((response) => {
+        axios.post(process.env.REACT_APP_API + "/users/user", { userID: props.userID }).then((response) => {
             setUserInfo(response.data);
             if(loggedStatus == props.userID){ setCurrentUsersPost(true) }
         });
@@ -30,7 +30,7 @@ function PostHeader(props) {
     }
 
     function deletePost(){
-        axios.post("http://localhost:3001/posts/delete", { postID: props.postID }, {withCredentials: true}).then((response) => {
+        axios.post(process.env.REACT_APP_API + "/posts/delete", { postID: props.postID }, {withCredentials: true}).then((response) => {
             if(response.data !== true){
                 console.log(response.data.errorMessage);
             }else{

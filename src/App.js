@@ -17,6 +17,7 @@ import About from "./pages/About";
 export const LoggedContext = React.createContext();
 
 function App(){
+  const {REACT_APP_API} = process.env;
   const [loggedStatus, setLoggedStatus] = useState(false);
 
   useEffect(() => {
@@ -40,7 +41,7 @@ function App(){
   );
 
   function checkLoggedStatus(){
-    axios.get("http://localhost:3001/auth/loggedStatus", {withCredentials: true}).then(response => {
+    axios.get(REACT_APP_API + "/auth/loggedStatus", {withCredentials: true}).then(response => {
       setLoggedStatus(response.data);
     })
   }

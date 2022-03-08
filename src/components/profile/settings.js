@@ -23,7 +23,7 @@ function Settings() {
     const [profileBacksplash, setProfileBacksplash] = useState(null);
 
     useEffect(()=>{
-        axios.get("http://localhost:3001/users/getPersonalSettings", { withCredentials: true }).then((response) => {
+        axios.get(process.env.REACT_APP_API + "/users/getPersonalSettings", { withCredentials: true }).then((response) => {
             if(response.data !== false){
                 setFirstName(response.data.firstName);
                 setLastName(response.data.lastName);
@@ -43,7 +43,7 @@ function Settings() {
 
     function updatePersonalSettings(e){
         e.preventDefault();
-        axios.post("http://localhost:3001/users/updatePersonalSettings",{ firstName, lastName, bio } , { withCredentials: true }).then((response) => {
+        axios.post(process.env.REACT_APP_API + "/users/updatePersonalSettings",{ firstName, lastName, bio } , { withCredentials: true }).then((response) => {
             if(response.data.result !== false){
                 navigate("/profile/view");
             }else{
@@ -67,7 +67,7 @@ function Settings() {
         const config = {
             withCredentials: true,
         };
-        axios.post("http://localhost:3001/users/updateProfilePicture", formData, config ).then((response) => {
+        axios.post(process.env.REACT_APP_API + "/users/updateProfilePicture", formData, config ).then((response) => {
             if(response.data.error === true){
                 console.log(response.data.message)
             }else{
@@ -90,7 +90,7 @@ function Settings() {
         const config = {
             withCredentials: true,
         };
-        axios.post("http://localhost:3001/users/updateProfileBacksplash", formData, config ).then((response) => {
+        axios.post(process.env.REACT_APP_API + "/users/updateProfileBacksplash", formData, config ).then((response) => {
             if(response.data.error === true){
                 console.log(response.data.message)
             }else{

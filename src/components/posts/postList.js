@@ -40,27 +40,27 @@ function PostList() {
   }
 
   function searchTechnology(technology){
-    axios.post("http://localhost:3001/posts/search", { pageNum: 1, technology }).then((response) => {
+    axios.post(process.env.REACT_APP_API + "/posts/search", { pageNum: 1, technology }).then((response) => {
       handleResults(response.data);
     });
   }
   function sortBy(sortBy){
-    axios.post("http://localhost:3001/posts/sort", { pageNum: 1, sortBy }).then((response) => {
+    axios.post(process.env.REACT_APP_API + "/posts/sort", { pageNum: 1, sortBy }).then((response) => {
       handleResults(response.data);
     });
   }
   function getLikedPosts(){
-    axios.post("http://localhost:3001/posts/liked", { pageNum: 1 }, {withCredentials: true}).then((response) => {
+    axios.post(process.env.REACT_APP_API + "/posts/liked", { pageNum: 1 }, {withCredentials: true}).then((response) => {
       handleResults(response.data);
     });
   }
   function getByCategory(category){
-    axios.post("http://localhost:3001/posts/category", { pageNum: 1, categoryID: category }, {withCredentials: true}).then((response) => {
+    axios.post(process.env.REACT_APP_API + "/posts/category", { pageNum: 1, categoryID: category }, {withCredentials: true}).then((response) => {
       handleResults(response.data);
     });
   }
   function getDefault(){
-    axios.post("http://localhost:3001/posts/default", { pageNum: 1 }).then((response) => {
+    axios.post(process.env.REACT_APP_API + "/posts/default", { pageNum: 1 }).then((response) => {
       handleResults(response.data);
     });
   }

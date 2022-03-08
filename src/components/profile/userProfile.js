@@ -20,7 +20,7 @@ function UserProfile() {
     const [likedCount,setLikedCount] = useState(0);
 
     useEffect(()=>{
-        axios.get('http://localhost:3001/users',{withCredentials: true}).then(function (response) {
+        axios.get(process.env.REACT_APP_API + '/users',{withCredentials: true}).then(function (response) {
             if(response.data === false){
                 // error
             }else{

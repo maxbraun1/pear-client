@@ -8,7 +8,7 @@ function NavBarUser(props){
     const [userDropdown,setUserDropdown] = useState(false)
 
     useEffect(() => {
-        axios.post("http://localhost:3001/users/user", {userID: props.user}).then((response) => {
+        axios.post(process.env.REACT_APP_API + "/users/user", {userID: props.user}).then((response) => {
             setUserInfo(response.data);
         });
     }, [props.user])

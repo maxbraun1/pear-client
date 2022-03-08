@@ -25,7 +25,7 @@ function Login() {
       password: password,
     };
 
-    axios.post('http://localhost:3001/auth/login',user,{withCredentials: true})
+    axios.post(process.env.REACT_APP_API + '/auth/login',user,{withCredentials: true})
     .then(function (response) {
       if(response.data === true){
         checkLoggedStatus();

@@ -12,7 +12,7 @@ function Footer(){
     function sendMessage(e){
         e.preventDefault()
         if(name && email && message){
-            axios.post('http://localhost:3001/message/', {name, email, message}).then(function (response) {
+            axios.post(process.env.REACT_APP_API + '/message/', {name, email, message}).then(function (response) {
             if(response.data.error === false){
                 setMessageSent(true);
             }else{

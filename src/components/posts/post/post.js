@@ -16,7 +16,7 @@ function Post(props) {
 
   // Get user info from userID
   useEffect(() => {
-    axios.post("http://localhost:3001/posts/post", { postID: props.postID }).then((response) => {
+    axios.post(process.env.REACT_APP_API + "/posts/post", { postID: props.postID }).then((response) => {
       setPostData(response.data);
     });
   }, [props.postID, postUpToDate]);

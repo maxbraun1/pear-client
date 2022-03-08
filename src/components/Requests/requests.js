@@ -7,7 +7,7 @@ function Requests(props) {
     const [listOfRequests, setListOfRequests] = useState([]);
 
     useEffect(()=>{
-        axios.get('http://localhost:3001/requests/userRequests',{withCredentials: true}).then(function (response) {
+        axios.get(process.env.REACT_APP_API + '/requests/userRequests',{withCredentials: true}).then(function (response) {
             if(response.data.error === true){
                 console.log("err:",response.data.message);
             }else{

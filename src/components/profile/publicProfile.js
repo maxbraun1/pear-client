@@ -20,7 +20,7 @@ function PublicProfile(props) {
 
     useEffect(()=>{
         if(props.userID != null){
-            axios.post('http://localhost:3001/users/public',{ userID: props.userID }).then(function (response) {
+            axios.post(process.env.REACT_APP_API + '/users/public',{ userID: props.userID }).then(function (response) {
                 if(response.data === false){
                     console.log("error");
                 }else{

@@ -21,7 +21,7 @@ function Feed() {
   const navigate = useNavigate();
 
   useEffect(()=>{
-    axios.get("http://localhost:3001/categories/").then((response) => {
+    axios.get(process.env.REACT_APP_API + "/categories/").then((response) => {
       setCategories(response.data);
     });
   },[])

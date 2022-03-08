@@ -25,7 +25,7 @@ function PostInteractions(props) {
         setPostLiked(props.postLikes.includes(loggedStatus));
 
         if(loggedStatus !== false){
-            Axios.post("http://localhost:3001/requests/checkRequest",{ postID: props.postID },{withCredentials: true}).then((response) => {
+            Axios.post(process.env.REACT_APP_API + "/requests/checkRequest",{ postID: props.postID },{withCredentials: true}).then((response) => {
                 if(response.data === true){
                     setRequestAlreadyMade(true);
                 }
@@ -44,7 +44,7 @@ function PostInteractions(props) {
     function likePost(){
         // If User is Logged in
         if(loggedStatus !== false){
-            Axios.post("http://localhost:3001/posts/like",{ userID: loggedStatus, postID: props.postID },{withCredentials: true}).then((response) => {
+            Axios.post(process.env.REACT_APP_API + "/posts/like",{ userID: loggedStatus, postID: props.postID },{withCredentials: true}).then((response) => {
                 if(response.data === true){
                     setPostUpToDate(!postUpToDate);
                 }else{
@@ -58,7 +58,7 @@ function PostInteractions(props) {
 
     function sendRequest(){
         if(loggedStatus !== false){
-            Axios.post("http://localhost:3001/requests/createRequest",{ message, postID: props.postID },{withCredentials: true}).then((response) => {
+            Axios.post(process.env.REACT_APP_API + "/requests/createRequest",{ message, postID: props.postID },{withCredentials: true}).then((response) => {
                 if(response.data.error === false){
                     // success
                     setMessege("");

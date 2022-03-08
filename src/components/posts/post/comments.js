@@ -7,7 +7,7 @@ function Comments(props) {
     const [comments, setComments] = useState([])
 
     useEffect(() => {
-        /*Axios.post("http://localhost:3001/categories/",{ categoryID: props.postCategory}).then((response) => {
+        /*Axios.post(process.env.REACT_APP_API + "/categories/",{ categoryID: props.postCategory}).then((response) => {
             setCategoryInfo(response.data);
         });*/
     },[props]);

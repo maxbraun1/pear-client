@@ -22,7 +22,7 @@ function Request(props) {
 
     function answerRequest(answer){
       if(window.confirm("Are you sure you to "+answer+" this request?") === true){
-        axios.post("http://localhost:3001/requests/answer", { requestID: request.requestID, answer }, {withCredentials: true}).then((response) => {
+        axios.post(process.env.REACT_APP_API + "/requests/answer", { requestID: request.requestID, answer }, {withCredentials: true}).then((response) => {
           console.log(response.data)
             if(response.data.error === true){
                 console.log(response.data.message);

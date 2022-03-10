@@ -51,14 +51,18 @@ function UserProfile() {
             <div className={classes.profileCoverPhoto} style={{backgroundImage: `url(${ profileBacksplash ? profileBacksplash : DefaultCover})`}}></div>
             <div className={classes.profileFlex}>
                 <div className={classes.profileLeftBar}>
-                    { firstName && profilePicture === null ? <p className={classes.profileChar}>{firstName.charAt(0).toUpperCase()}</p> : null }
-                    { profilePicture !== null ? <div className={classes.profilePicture} style={{backgroundImage: `url(${profilePicture})`}}></div> : null }
-                    <div className={classes.profileName}>{firstName + " " + lastName}</div>
-                    <div className={classes.profileBio}>{bio}</div>
-                    <div className={classes.pofileInfo}>
-                        <div className={classes.profileInfoStat}><img src={PostIcon}/><span className={classes.profileStatTitle}>Ideas:</span> {postCount}</div>
-                        <div className={classes.profileInfoStat}><img src={HeartIcon}/><span className={classes.profileStatTitle}>Liked Ideas:</span> {likedCount}</div>
-                        <div className={classes.profileInfoStat}><img src={CalendarIcon}/><span className={classes.profileStatTitle}>Joined:</span> {getMemberDate(accountDate)}</div>
+                    <div className={classes.profilePictureMobile}>
+                        { firstName && profilePicture === null ? <p className={classes.profileChar}>{firstName.charAt(0).toUpperCase()}</p> : null }
+                        { profilePicture !== null ? <div className={classes.profilePicture} style={{backgroundImage: `url(${profilePicture})`}}></div> : null }
+                    </div>
+                    <div className={classes.profileInfoMobile}>
+                        <div className={classes.profileName}>{firstName + " " + lastName}</div>
+                        <div className={classes.profileBio}>{bio}</div>
+                        <div className={classes.pofileInfo}>
+                            <div className={classes.profileInfoStat}><img src={PostIcon}/><span className={classes.profileStatTitle}>Ideas:</span> {postCount}</div>
+                            <div className={classes.profileInfoStat}><img src={HeartIcon}/><span className={classes.profileStatTitle}>Liked Ideas:</span> {likedCount}</div>
+                            <div className={classes.profileInfoStat}><img src={CalendarIcon}/><span className={classes.profileStatTitle}>Joined:</span> {getMemberDate(accountDate)}</div>
+                        </div>
                     </div>
                 </div>
                 <div className={classes.profileRight}>

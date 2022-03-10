@@ -79,3 +79,15 @@
 .dropdown a:last-child{
     border-bottom: none;
 }
+
+/* -- MEDIA QUERIES -- */
+
+@media only screen and (max-width: 768px) {
+    .displayName{
+        display:none;
+    }
+    .navBarUserWrapper{
+        padding:0 15px;
+        border:none;
+    }
+}

@@ -89,3 +89,22 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+
+/* -- MEDIA QUERIES -- */
+
+@media only screen and (max-width: 1024px) {
+    .profileFlex{
+        flex-direction: column;
+    }
+    .profileLeftBar{
+        flex-basis: 100%;
+        border:none;
+        display:flex;
+    }
+    .profilePictureMobile{
+
+    }
+    .profileInfoMobile{
+        
+    }
+}

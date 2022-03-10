@@ -10,10 +10,9 @@
     color:white;
     background-color: var(--accent-0);
     line-height: 50px;
-    padding:0 10px;
     text-align: center;
     display:block;
-    width:90%;
+    width:100%;
     border-radius: 50px;
     box-sizing: border-box;
     font-weight: normal;
@@ -30,7 +29,6 @@
     vertical-align: middle;
 }
 .searchTechnologies{
-    width:100%;
     border-bottom: 1px solid gainsboro;
     box-sizing: border-box;
     padding:10px;
@@ -64,4 +62,49 @@
 }
 .searchCategories a:last-child{
     border-bottom: none;
+}
+
+.closeSidebar{
+    display:none;
+    height:40px;
+    background-color: gainsboro;
+    border-radius: 40px;
+    line-height: 40px;
+    margin:20px auto;
+    padding:0;
+    color:black;
+    padding:0 20px;
+}
+.closeSidebar img{
+    width:20px;
+    height:20px;
+    padding:10px 0;
+    vertical-align: top;
+}
+
+.openSidebar{
+    width:100%;
+    line-height: 40px;
+    background-color: white;
+    padding:10px 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+.openSidebar img{
+    float:right;
+    width:16px;
+    height:16px;
+    padding:12px;
+}
+
+/* -- MEDIA QUERIES -- */
+
+@media only screen and (max-width: 1024px) {
+    .newPostButtonContainer{
+      display:none;
+    }
+    .closeSidebar{
+        display:block;
+    }
 }

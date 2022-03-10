@@ -10,3 +10,20 @@
 .navSidebar::-webkit-scrollbar{
   display:none;
 }
+
+
+/* -- MEDIA QUERIES -- */
+
+@media only screen and (max-width: 1024px) {
+  .navSidebar{
+    width:100%;
+    position:fixed;
+    top:var(--NavbarHeight);
+    box-sizing: border-box;
+    left:0;
+    bottom:0;
+    height:calc(100vh - var(--NavbarHeight));
+    z-index: 100;
+    display:none;
+  }
+}

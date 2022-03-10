@@ -1,5 +1,6 @@
 .postTech{
     display:flex;
+    flex-wrap: wrap;
     padding: 0 20px;
 }
 .techBubble{

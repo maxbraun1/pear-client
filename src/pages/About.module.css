@@ -1,3 +1,8 @@
+.aboutContainer{
+    width:100%;
+    box-sizing: border-box;
+    padding:30px;
+}
 .idea{
     display:flex;
     flex-direction: column;

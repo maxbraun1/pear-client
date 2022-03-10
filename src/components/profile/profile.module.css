@@ -103,11 +103,27 @@
         flex-basis: 100%;
         border:none;
         display:flex;
+        justify-content: space-between;
+    }
+    .profileChar{
+        width:130px;
+        height:130px;
+        line-height:130px;
+    }
+    .profilePicture{
+        width:130px;
+        height:130px;
+    }
+    .profileName{
+        text-align: left;
+    }
+    .profileBio{
+        text-align: left;
     }
     .profilePictureMobile{
-
+        flex-basis: 40%;
     }
     .profileInfoMobile{
-
+        flex-basis: 50%;
     }
 }

@@ -25,7 +25,6 @@ function UserProfile() {
                 // error
             }else{
                 const user = response.data;
-                console.log(response.data)
                 setFirstName(user.firstName);
                 setLastName(user.lastName);
                 setBio(user.bio);

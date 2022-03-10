@@ -24,3 +24,11 @@
   border-radius: 10px;
   background-color: rgb(185, 185, 185);
 }
+
+/* -- MEDIA QUERIES -- */
+
+@media only screen and (max-width: 1024px) {
+  .mainContent{
+    padding:10px;
+  }
+}

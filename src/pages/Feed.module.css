@@ -90,6 +90,7 @@
     border-radius: 10px;
     margin-bottom: 20px;
     box-sizing: border-box;
+    display:none;
 }
 .openSidebar img{
     float:right;
@@ -105,6 +106,9 @@
       display:none;
     }
     .closeSidebar{
+        display:block;
+    }
+    .openSidebar{
         display:block;
     }
 }

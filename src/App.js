@@ -18,14 +18,16 @@ export const LoggedContext = React.createContext();
 
 function App(){
   const {REACT_APP_API} = process.env;
-  const [loggedStatus, setLoggedStatus] = useState(false);
+  const [loggedStatus, setLoggedStatus] = useState(null);
 
   useEffect(() => {
     checkLoggedStatus();
-  }, [])
+  })
   
   return (
+    
     <LoggedContext.Provider value={{loggedStatus, checkLoggedStatus}}>
+      { loggedStatus !== null ? <>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/feed" element={<Feed />} />
@@ -37,6 +39,7 @@ function App(){
         <Route path="/user" element={<User />} />
         <Route path="/about" element={<About />} />
       </Routes>
+      </> : null }
     </LoggedContext.Provider>
   );
 

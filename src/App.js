@@ -27,7 +27,6 @@ function App(){
   return (
     
     <LoggedContext.Provider value={{loggedStatus, checkLoggedStatus}}>
-      { loggedStatus !== null ? <>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/feed" element={<Feed />} />
@@ -39,7 +38,6 @@ function App(){
         <Route path="/user" element={<User />} />
         <Route path="/about" element={<About />} />
       </Routes>
-      </> : null }
     </LoggedContext.Provider>
   );
 

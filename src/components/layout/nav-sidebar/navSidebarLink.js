@@ -1,10 +1,9 @@
 import classes from "./navSidebarLink.module.css";
-import { Link } from "react-router-dom";
-import Arrow from "../../../assets/icons/right-arrow.svg";
+import { NavLink } from "react-router-dom";
 
 function NavSidebarLink(props){
     return(
-        <Link className={classes.link} to={props.to}><div className={classes.linkInner}>{props.linkTitle} <img src={Arrow}/></div></Link>
+        <NavLink className='active' to={props.to}><div className={classes.linkInner}>{props.children}</div></NavLink>
     )
 }
 

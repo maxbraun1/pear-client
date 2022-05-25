@@ -7,17 +7,21 @@ import PageContainer from "../components/layout/page-container";
 import MainContent from "../components/layout/main-content";
 import NavSidebar from "../components/layout/nav-sidebar/navSidebar";
 import { Link } from "react-router-dom";
-import plusIcon from "../assets/icons/plusIcon.svg";
+import { ReactComponent as PlusIcon } from "../assets/icons/plusIcon.svg";
 import classes from "./Feed.module.css";
 import NavSidebarLink from "../components/layout/nav-sidebar/navSidebarLink";
 import { LoggedContext } from '../App';
 import XIcon from "../assets/icons/xIcon.svg";
-import DownArrow from "../assets/icons/down-arrow-black.svg"
+import DownArrow from "../assets/icons/down-arrow-black.svg";
+import { ReactComponent as HomeIcon } from "../assets/icons/homeIcon.svg";
+import { ReactComponent as ThumbIcon } from "../assets/icons/thumbUpIcon.svg";
+import { ReactComponent as HeartIcon } from "../assets/icons/heartIcon.svg";
 
 function Feed() {
   const [technology, setTechnology] = useState(null);
   const [categories, setCategories] = useState(null);
   const [showSideBar, setShowSidebar] = useState(null);
+  const [showCategories, setShowCategories] = useState(true);
 
   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -48,25 +52,33 @@ function Feed() {
     }
   }
 
+  function toggleCategories(){
+    setShowCategories(!showCategories);
+  }
+
   return (
     <div>
       <NavBar />
       <PageContainer>
         <NavSidebar show={showSideBar}>
           <div className={classes.searchTechnologies}><input onKeyDown={updateTechnology} value={technology || ""} onChange={(e)=>setTechnology(e.target.value)} type="text" placeholder="Search By Technology"/></div>
-          <NavSidebarLink to="./" linkTitle="Home"/>
-          <div className={classes.searchCategories}>
-            <p className={classes.searchCategoriesTitle}>Categories</p>
-            { categories ? categories.map((category) => <Link key={category._id} onClick={toggleSidebar} to={"?category="+category._id}>{category.name}</Link>) : null }
+          <div className={classes.sidebarContainer}>
+            <NavSidebarLink to="./"><HomeIcon/> Home</NavSidebarLink>
+            <NavSidebarLink to="?sortBy=mostlikes"><ThumbIcon/>Most Likes</NavSidebarLink>
+            { loggedStatus !== false ? <>
+              <NavSidebarLink to="?likes=true"><HeartIcon/>Your Likes</NavSidebarLink>
+            </> : null }
           </div>
-          <NavSidebarLink to="?sortBy=mostlikes" linkTitle="Most Likes"/>
-          { loggedStatus !== false ? <>
-            <NavSidebarLink to="?likes=true" linkTitle="Your Likes"/>
-            <div className={classes.newPostButtonContainer}><Link className={classes.newPostButton} to="/submit">New Idea <img src={plusIcon}></img></Link></div>
-          </> : null }
+          <div className={classes.searchCategories}>
+            <div className={classes.searchCategoriesButton} onClick={toggleCategories}>Categories<img src={DownArrow} style={ showCategories ? null : {"transform":"rotate(-90deg)"}}/></div>
+            { categories && showCategories ? categories.map((category) => <Link style={{"backgroundColor":"#"+category.color}} key={category._id} onClick={toggleSidebar} to={"?category="+category._id}>{category.name}</Link>) : null }
+          </div>
           <button onClick={toggleSidebar} className={classes.closeSidebar}><img src={XIcon}/> Close</button>
         </NavSidebar>
         <MainContent>
+          { loggedStatus !== false ? <>
+            <div className={classes.newPostButtonContainer}><Link className={classes.newPostButton} to="/submit">Post a New Idea</Link></div>
+          </> : null }
           <div className={classes.openSidebar} onClick={toggleSidebar}>Categories and Sort <img src={DownArrow}/></div>
           <PostList />
         </MainContent>

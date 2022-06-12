@@ -15,7 +15,6 @@ function NavBar() {
         <img className={classes.logo} src={PearLogo} alt="logo"/>
         <div className="nav-links">
           <Link to="/" className={classes.link}>Home</Link>
-          <Link to="/feed" className={classes.link}>Feed</Link>
         </div>
       </div>
       <div className={classes.navRight}>

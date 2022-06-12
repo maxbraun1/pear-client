@@ -26,9 +26,9 @@ function Profile() {
       <NavBar />
       <PageContainer>
         <NavSidebar>
-          <NavSidebarLink to="./view" linkTitle="Your Profile"/>
-          <NavSidebarLink to="./settings" linkTitle="Settings"/>
-          <NavSidebarLink to="./requests" linkTitle="Requests"/>
+          <NavSidebarLink to="./view">Your Profile</NavSidebarLink>
+          <NavSidebarLink to="./settings">Settings</NavSidebarLink>
+          <NavSidebarLink to="./requests">Requests</NavSidebarLink>
         </NavSidebar>
         <MainContent>
           <Routes>

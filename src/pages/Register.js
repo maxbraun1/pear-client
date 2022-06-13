@@ -37,7 +37,7 @@ function Register() {
     .then(function (response) {
       if(response.data === true){
         checkLoggedStatus();
-        navigate("/feed");
+        navigate("/");
       }
     })
     .catch(function (error) {

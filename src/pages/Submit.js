@@ -47,7 +47,7 @@ function Register() {
 
         axios.post(process.env.REACT_APP_API + '/posts/addImage', formData ,{withCredentials: true}).then(function (response) {
             if(response.data.error === false){
-                navigate("/feed");
+                navigate("/");
             }else{
                 console.log(response.data.message)
             }
@@ -72,7 +72,7 @@ function Register() {
                 if(postImage){
                     addPostImage(response.data.newPostID);
                 }else{
-                    navigate("/feed");
+                    navigate("/");
                 }
             }else{
                 console.log(response.data)

@@ -4,6 +4,7 @@
     background-color:#f7f7f7;
     padding:20px;
     box-sizing: border-box;
+    min-height:calc(100vh);
 }
 
 /* -- MEDIA QUERIES -- */

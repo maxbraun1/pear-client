@@ -2,9 +2,9 @@
     background-color:white;
     width:100%;
     max-width: 700px;
-    border-radius:20px;
+    border-radius:15px;
     margin-bottom:20px;
-    box-shadow: 0 0 5px #b8b8b8;
+    box-shadow: 0 0 5px #dfdfdf;
     overflow:hidden;
 }
 .post:last-child{

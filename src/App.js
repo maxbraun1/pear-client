@@ -28,8 +28,8 @@ function App(){
     
     <LoggedContext.Provider value={{loggedStatus, checkLoggedStatus}}>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/feed" element={<Feed />} />
+        <Route path="/" element={<Feed />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/logout" element={<PrivateRoute auth={loggedStatus}><Logout/></PrivateRoute>} />
         <Route path="/submit" element={<PrivateRoute auth={loggedStatus}><Submit/></PrivateRoute>} />
         <Route path="/profile/*" element={<PrivateRoute auth={loggedStatus}><Profile /></PrivateRoute>} />

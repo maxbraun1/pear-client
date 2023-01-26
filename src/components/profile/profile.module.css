@@ -81,7 +81,7 @@
     width:100%;
     box-sizing: border-box;
     padding:20px;
-    background-color: #f7f7f7;
+    background-color: white;
 }
 .postsWrapper{
     display:flex;

@@ -16,8 +16,10 @@ import DownArrow from "../assets/icons/down-arrow-black.svg";
 import { ReactComponent as HomeIcon } from "../assets/icons/homeIcon.svg";
 import { ReactComponent as ThumbIcon } from "../assets/icons/thumbUpIcon.svg";
 import { ReactComponent as HeartIcon } from "../assets/icons/heartIcon.svg";
+import loadingLogo from "../assets/images/pearlogogif.gif";
 
 function Feed() {
+  const [hideLoadingOverlay, setHideLoadingOverlay] = useState(false);
   const [technology, setTechnology] = useState(null);
   const [categories, setCategories] = useState(null);
   const [showSideBar, setShowSidebar] = useState(null);
@@ -30,11 +32,14 @@ function Feed() {
   const navigate = useNavigate();
 
   useEffect(()=>{
+    if(loggedStatus != null){
+      setHideLoadingOverlay(true);
+    }
     axios.get(process.env.REACT_APP_API + "/categories/").then((response) => {
       setCategories(response.data);
     });
     setShowSidebar(false)
-  },[searchParams])
+  },[searchParams, loggedStatus])
 
   function updateTechnology(e){
     if(e.keyCode == 13){
@@ -58,6 +63,11 @@ function Feed() {
 
   return (
     <div>
+      <div className={classes.loading} style={{ display:  hideLoadingOverlay ? 'none' : 'flex'}}>
+        <img src={loadingLogo}/>
+        <p>Server starting up...</p>
+        <span>Pear Programming server is hosted on a free <a href="https://render.com/">Render</a> instance that shuts down when not in use.</span>
+      </div>
       <NavBar />
       <PageContainer>
         <NavSidebar show={showSideBar}>

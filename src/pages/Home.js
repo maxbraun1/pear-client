@@ -30,6 +30,7 @@ function Home() {
             <FadeIn>
               <h1 className={classes.headTitle}>Pear Programming</h1>
               <p className={classes.headDesc}>A place for developers to share ideas, find inspiration, and work together to build their skills and resumes.</p>
+              <button onClick={headButton} className={classes.headButton}>Create an account</button>
             </FadeIn>
           </div>
         </div>
@@ -72,7 +73,6 @@ function Home() {
           <h1 className={classes.aboutDescTitle}>What is Pear Programming?</h1>
           <p>Pear Programming is a place for junior developers to build their development skills, teamwork skills (pair programming), and resumes.</p>
           <p>The idea behind this website is that it's often difficult for junior developers to find interesting and usefull projects to work on while building their resume and heading into the world of job searching. Businesses value a developer's ability and experience working with others, but it can be difficult to find developers with similar interests and skill levels to work with.</p>
-          <Link to="/about"><button>Read More</button></Link>
         </div>
         <div className={classes.aboutPost}>
           <Post key="1" postID="6220ea3cea256d2f3ccc7377"></Post>  

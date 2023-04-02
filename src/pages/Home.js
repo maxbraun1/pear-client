@@ -30,7 +30,6 @@ function Home() {
             <FadeIn>
               <h1 className={classes.headTitle}>Pear Programming</h1>
               <p className={classes.headDesc}>A place for developers to share ideas, find inspiration, and work together to build their skills and resumes.</p>
-              <button onClick={headButton} className={classes.headButton}>Create an account</button>
             </FadeIn>
           </div>
         </div>
